@@ -1,47 +1,19 @@
 public class InterfaceSegregation
 {
-    public interface Shape
+    public interface MediaFetcher
     {
-        public double getArea();
+        public String getLink();
     }
-    public interface Square extends Shape
+    public interface GifFetcher:MediaFetcher
     {
-        public double getSideLength();
+        public String getLink();
     }
-    public interface Circle extends Shape
+    public interface VideoFetcher:MediaFetcher
     {
-        public double getCircumference();
+        public String getLink();
     }
-    public class SquareImpl implements Square
+    public interface VideoFetcher:MediaFetcher
     {
-        private double sideLength;
-        public Square(double sideLength)
-        {
-            this.sideLength = sideLength;
-        }
-        public double getArea()
-        {
-            return sideLength * sideLength;
-        }
-        public double getSideLength()
-        {
-            return sideLength;
-        }
-    }
-    public class CircleImpl implements Circle
-    {
-        private double radius;
-        public Circle(double radius)
-        {
-            this.radius = radius;
-        }
-        public double getArea()
-        {
-            return radius * radius * 3.14
-        }
-        public double getCircumference()
-        {
-            return 2 * 3.14 * radius;
-        }
+        public String getLink();
     }
 }

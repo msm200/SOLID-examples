@@ -3,7 +3,7 @@ public OpenClosed{
         public double getMonthlyRate();
     }
 
-    public class BasicUser implements User
+    public class BasicUser : User
     {
         public String name;
         public double getMonthlyRate()
@@ -12,7 +12,7 @@ public OpenClosed{
         }
     }
 
-    public class PremiumUser implements User
+    public class PremiumUser : User
     {
         public String name;
         public double getMonthlyRate()
@@ -21,7 +21,7 @@ public OpenClosed{
         }
     }
 
-    public class GoldUser implements User
+    public class GoldUser : User
     {
         public String name;
         public double getMonthlyRate()
